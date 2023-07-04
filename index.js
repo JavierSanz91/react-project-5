@@ -9,7 +9,8 @@ function numbsSquared(numbs) {
     return numbs.map(num => num ** 2);
 }
 
-console.log(numbsSquared(numbs));
+const squared = numbsSquared(numbs);
+console.log(squared);
 
 /* 
 Challenge 2:
@@ -18,8 +19,24 @@ Given an array of strings, return an array where the first letter of each array 
 
 const names = ["alice", "bob", "charlie", "danielle"]
 
-function nameCapitalized(name) {
+
+function namesCapitalized(names) {
     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase());
 }
 
-console.log(nameCapitalized(names));
+const namesCap = namesCapitalized(names);
+console.log(namesCap);
+
+/*
+Challenge 3:
+Given an array of strings, return an array of string that wraps the original strings in an HTML-like <p></p> tag
+*/
+
+const pokemon = ["Bulbasaur", "Charmander", "Squirtle"];
+
+function pokemonHTML(pokemon) {
+    return pokemon.map(poke => "<p>" + poke + "</p>");
+}
+
+const pokem = pokemonHTML(pokemon);
+console.log(pokem);
